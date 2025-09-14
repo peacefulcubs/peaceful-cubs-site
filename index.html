@@ -4,7 +4,7 @@
   <!-- LAUNCH NOTES (v3.1 Contrast-Safe)
     • ConvertKit TODO still present in #freebie.
     • Gumroad overlay toggle: ENABLE_OVERLAY (see inline JS).
-    • Social images: /assets/social/og-1200x630.png, /assets/pin/1000x1500.png
+    • Social images: /assets/social/og-1200x630.jpg, /assets/pin/1000x1500.jpg
     • Contrast fixes:
         - Primary buttons now COCOA background with WHITE text (AA+).
         - Ghost buttons use COCOA text/border (AA+ on OAT/WHITE).
@@ -28,6 +28,8 @@
   <meta name="twitter:title" content="Toddler Tantrums Help — Peaceful Cubs">
   <meta name="twitter:description" content="Calm, expert-informed PDFs for real-life toddler moments.">
   <meta name="twitter:image" content="/assets/social/og-1200x630.png">
+  <!-- Favicon for the site; displays the submark icon in browser tabs and bookmarks -->
+  <link rel="icon" href="/assets/submark.png" type="image/png">
 
   <!-- Fonts: preconnect + swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -218,6 +220,41 @@
       .nav__panel a:focus{outline:var(--focus); outline-offset:2px}
       .nav__panel--open{display:flex}
     }
+    /*
+      Custom overrides for image presentation and branding.
+      These rules ensure images fill their containers and remove default backgrounds.
+    */
+    .hero__img {
+      background:none;
+    }
+    .hero__img img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .card__media {
+      background:none;
+    }
+    .card__media img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .brand__logo {
+      background:none;
+      overflow:hidden;
+      /* Reset display so the logo image fills the circle */
+      display:block;
+    }
+    .brand__logo img {
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      object-fit:cover;
+      display:block;
+    }
   </style>
 </head>
 <body>
@@ -226,7 +263,7 @@
   <header>
     <div class="container nav" role="navigation" aria-label="Primary">
       <a class="brand" href="#home">
-        <span class="brand__logo" aria-hidden="true">PC</span>
+        <span class="brand__logo" aria-hidden="true"><img src="assets/logo.PNG" alt="Peaceful Cubs logo"></span>
         <span class="brand__name">Peaceful Cubs</span>
       </a>
       <nav class="nav__links" aria-label="Main">
@@ -270,6 +307,7 @@
         <div class="hero__img" data-pin-do="buttonBookmark" data-pin-custom="true" aria-label="Preview of Peaceful Cubs parenting guides" role="img">
           <!-- Real mockup image inserted -->
           <img src="assets/Hero.png" alt="Peaceful Cubs guides flat‑lay mockup" loading="lazy">
+          <span class="pin-helper">Pin-ready image</span>
         </div>
       </div>
     </section>
@@ -287,7 +325,9 @@
               <span class="badge">Starter Kit</span>
               <span class="price" aria-label="Price">£9.99</span>
             </div>
-            <div class="card__media" aria-hidden="true"><img src="assets/starter-kit.png" alt="Peaceful Parenting Starter Kit cover" loading="lazy"></div>
+            <div class="card__media" aria-hidden="true">
+              <img src="assets/starter-kit.png" alt="Peaceful Parenting Starter Kit cover" loading="lazy">
+            </div>
             <h3 class="card__title">Peaceful Parenting Starter Kit</h3>
             <ul class="list">
               <li>Step‑by‑step meltdown plan (stay calm & connected)</li>
@@ -308,7 +348,9 @@
               <span class="badge">Guide</span>
               <span class="price" aria-label="Price">£3.99</span>
             </div>
-            <div class="card__media" aria-hidden="true"><img src="assets/big-feelings.png" alt="Big Feelings Guide cover" loading="lazy"></div>
+            <div class="card__media" aria-hidden="true">
+              <img src="assets/big-feelings.png" alt="Big Feelings Guide cover" loading="lazy">
+            </div>
             <h3 class="card__title">Big Feelings Guide</h3>
             <ul class="list">
               <li>Why meltdowns happen (plain English)</li>
@@ -439,7 +481,7 @@
       <div class="container">
         <h2 id="contact-h">Contact</h2>
         <p class="sub">Questions or feedback? We’d love to hear from you.</p>
-        <p>Email: <a href="mailto:hello@peacefulcubs.com">hello@peacefulcubs.com</a></p>
+        <p>Email: <a href="mailto:hello@peacefulcubs.example">hello@peacefulcubs.example</a></p>
       </div>
     </section>
   </main>
