@@ -18,16 +18,18 @@
   <meta name="description" content="Practical, gentle parenting PDFs for toddler tantrums, routines, and mealtimes. Montessori-aligned scripts and visuals that actually work—fast to read, easy to use.">
 
   <!-- Canonical & Social -->
-  <link rel="canonical" href="https://peacefulcubs.example/">
+  <link rel="canonical" href="https://www.peacefulcubs.com/">
   <meta property="og:title" content="Toddler Tantrums Help That Actually Works — Peaceful Cubs">
   <meta property="og:description" content="Gentle parenting scripts & Montessori-aligned tips for big feelings, calm routines, and peaceful mealtimes.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/social/og-1200x630.jpg">
+  <meta property="og:image" content="/assets/social/og-1200x630.png">
   <meta property="og:image:alt" content="Peaceful Cubs PDF guides on a soft background with gentle illustrations.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Toddler Tantrums Help — Peaceful Cubs">
   <meta name="twitter:description" content="Calm, expert-informed PDFs for real-life toddler moments.">
-  <meta name="twitter:image" content="/assets/social/og-1200x630.jpg">
+  <meta name="twitter:image" content="/assets/social/og-1200x630.png">
+  <!-- Favicon for the site; displays the submark icon in browser tabs and bookmarks -->
+  <link rel="icon" href="/assets/submark.png" type="image/png">
 
   <!-- Fonts: preconnect + swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
@@ -218,6 +220,41 @@
       .nav__panel a:focus{outline:var(--focus); outline-offset:2px}
       .nav__panel--open{display:flex}
     }
+    /*
+      Custom overrides for image presentation and branding.
+      These rules ensure images fill their containers and remove default backgrounds.
+    */
+    .hero__img {
+      background:none;
+    }
+    .hero__img img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .card__media {
+      background:none;
+    }
+    .card__media img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .brand__logo {
+      background:none;
+      overflow:hidden;
+      /* Reset display so the logo image fills the circle */
+      display:block;
+    }
+    .brand__logo img {
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      object-fit:cover;
+      display:block;
+    }
   </style>
 </head>
 <body>
@@ -226,7 +263,7 @@
   <header>
     <div class="container nav" role="navigation" aria-label="Primary">
       <a class="brand" href="#home">
-        <span class="brand__logo" aria-hidden="true">PC</span>
+        <span class="brand__logo" aria-hidden="true"><img src="assets/logo.PNG" alt="Peaceful Cubs logo"></span>
         <span class="brand__name">Peaceful Cubs</span>
       </a>
       <nav class="nav__links" aria-label="Main">
@@ -257,7 +294,7 @@
           <h1>Toddler Tantrums Help That Actually Works</h1>
           <p class="hero__p">Gentle parenting scripts and Montessori-aligned tips to handle big feelings—plus calm routines and peaceful mealtimes. Fast to read. Easy to use.</p>
           <div class="cta-row">
-              <a class="btn" data-analytics="click.cta.starter" href="https://peacefulcubs.gumroad.com/l/peaceful-cubs-starter-kit">Get the Starter Kit</a>
+            <a class="btn" data-analytics="click.cta.starter" href="https://peacefulcubs.gumroad.com/l/peaceful-cubs-starter-kit">Get the Starter Kit</a>
             <a class="btn btn--ghost" data-analytics="click.cta.freebie.scroll" href="#freebie">Free Morning Routine Checklist</a>
           </div>
           <div class="trust" aria-label="Trust indicators">
@@ -268,7 +305,8 @@
           <p class="micro" style="margin-top:8px">*If you haven’t downloaded the files yet or something isn’t right, get in touch—we’ll help.</p>
         </div>
         <div class="hero__img" data-pin-do="buttonBookmark" data-pin-custom="true" aria-label="Preview of Peaceful Cubs parenting guides" role="img">
-          <!-- Replace with real mockup image -->
+          <!-- Real mockup image inserted -->
+          <img src="assets/Hero.png" alt="Peaceful Cubs guides flat‑lay mockup" loading="lazy">
           <span class="pin-helper">Pin-ready image</span>
         </div>
       </div>
@@ -287,7 +325,9 @@
               <span class="badge">Starter Kit</span>
               <span class="price" aria-label="Price">£9.99</span>
             </div>
-            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__media" aria-hidden="true">
+              <img src="assets/starter-kit.png" alt="Peaceful Parenting Starter Kit cover" loading="lazy">
+            </div>
             <h3 class="card__title">Peaceful Parenting Starter Kit</h3>
             <ul class="list">
               <li>Step‑by‑step meltdown plan (stay calm & connected)</li>
@@ -308,7 +348,9 @@
               <span class="badge">Guide</span>
               <span class="price" aria-label="Price">£3.99</span>
             </div>
-            <div class="card__media" aria-hidden="true"></div>
+            <div class="card__media" aria-hidden="true">
+              <img src="assets/big-feelings.png" alt="Big Feelings Guide cover" loading="lazy">
+            </div>
             <h3 class="card__title">Big Feelings Guide</h3>
             <ul class="list">
               <li>Why meltdowns happen (plain English)</li>
@@ -439,7 +481,7 @@
       <div class="container">
         <h2 id="contact-h">Contact</h2>
         <p class="sub">Questions or feedback? We’d love to hear from you.</p>
-        <p>Email: <a href="mailto:hello@peacefulcubs.example">hello@peacefulcubs.example</a></p>
+        <p>Email: <a href="mailto:hello@peacefulcubs.com">hello@peacefulcubs.com</a></p>
       </div>
     </section>
   </main>
@@ -474,8 +516,8 @@
       {
         "@type":"Organization",
         "name":"Peaceful Cubs",
-        "url":"https://peacefulcubs.example/",
-        "logo":"https://peacefulcubs.example/assets/logo.png",
+        "url":"https://www.peacefulcubs.com/",
+        "logo":"https://www.peacefulcubs.com/assets/logo.PNG",
         "sameAs":[]
       },
       {
@@ -490,7 +532,7 @@
         "@type":"Product",
         "name":"Peaceful Parenting Starter Kit",
         "brand":{"@type":"Brand","name":"Peaceful Cubs"},
-        "image":"https://peacefulcubs.example/assets/starter-kit.jpg",
+        "image":"https://www.peacefulcubs.com/assets/starter-kit.png",
         "description":"A bundle to handle big feelings with calm steps, gentle phrases, and a printable calm-down corner.",
         "sku":"PCS-STARTER",
         "offers":{
@@ -506,7 +548,7 @@
         "@type":"Product",
         "name":"Big Feelings Guide",
         "brand":{"@type":"Brand","name":"Peaceful Cubs"},
-        "image":"https://peacefulcubs.example/assets/big-feelings.jpg",
+        "image":"https://www.peacefulcubs.com/assets/big-feelings.png",
         "description":"Plain-English guide to toddler meltdowns with scripts and reconnection steps.",
         "sku":"PCS-BF-01",
         "offers":{
@@ -641,18 +683,13 @@
     });
 
     // Gumroad overlay (enabled by default)
-    // To make the primary call‑to‑action buttons open a Gumroad checkout overlay
-    // instead of navigating away, set ENABLE_OVERLAY to true and load the Gumroad
-    // overlay script. When using the overlay, you only need to load the
-    // `gumroad.js` script once and ensure your <a> links point to your Gumroad
-    // product URLs. The overlay script automatically intercepts those links and
-    // opens the product page in a modal【514727754932360†L68-L76】.
+    // When ENABLE_OVERLAY is set to true, the Gumroad overlay script will load
+    // and automatically intercept any links that point to your Gumroad products.
+    // The overlay will open the product page in a modal instead of navigating away.
+    // Include the overlay script only once on the page【514727754932360†L68-L76】.
     const ENABLE_OVERLAY = true;
     if (ENABLE_OVERLAY) {
       const s = document.createElement('script');
-      // Load Gumroad's overlay script. It will automatically bind to any
-      // anchor tag that links to a Gumroad product. Do not include this
-      // script multiple times on the page【514727754932360†L68-L76】.
       s.src = 'https://gumroad.com/js/gumroad.js';
       s.async = true;
       document.body.appendChild(s);
